@@ -1,0 +1,15 @@
+# Service manifest placeholder
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-service
+  namespace: microservices
+spec:
+  selector:
+    app: flask-microservice
+  ports:
+  - name: http
+    protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: ClusterIP

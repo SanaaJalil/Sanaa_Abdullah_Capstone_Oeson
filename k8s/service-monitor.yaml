@@ -1,0 +1,18 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: flask-service-monitor
+  namespace: microservices
+  labels:
+    release: monitoring  
+spec:
+  selector:
+    matchLabels:
+      app: flask-microservice      
+  namespaceSelector:
+    matchNames:
+      - microservices             
+  endpoints:
+    - port: http                    
+      path: /metrics               
+      interval: 15s

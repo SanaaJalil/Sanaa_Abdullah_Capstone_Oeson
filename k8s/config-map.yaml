@@ -1,0 +1,8 @@
+# ConfigMap manifest placeholder
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: flask-config
+  namespace: microservices
+data:
+  APP_ENV: production
