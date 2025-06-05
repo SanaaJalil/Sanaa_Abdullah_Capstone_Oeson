@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Kubernetes
+kubeconfig
+secret.yaml
+
+# Terraform
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.backup
+.terraform/
+terraform.tfvars
+kubeconfig-jenkins
+
+# SSH Keys
+*.pem
+*.key
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log
+
+# VS Code
+.vscode/
+
+
+#ansible
+configure-pipeline.yml
+inventory.ini
