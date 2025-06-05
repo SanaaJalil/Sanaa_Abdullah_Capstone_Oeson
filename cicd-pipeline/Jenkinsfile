@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/SanaaJalil/oeson-capstone-full-project.git'
+                git branch: 'master', url: 'https://github.com/SanaaJalil/Sanaa_Abdullah_Capstone_Oeson.git'
             }
         }
 
