@@ -1,0 +1,10 @@
+---
+- name: Deploy Application
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Apply deployment and service YAML
+      shell: |
+        kubectl apply -f k8s/deployment.yaml
+        kubectl apply -f k8s/service.yaml

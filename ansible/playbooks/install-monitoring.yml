@@ -1,0 +1,21 @@
+---
+- name: Install Monitoring Stack
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Install Helm
+      shell: |
+        curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+      args:
+        executable: /bin/bash
+
+    - name: Add Prometheus Helm repo
+      shell: helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+
+    - name: Update Helm repos
+      shell: helm repo update
+
+    - name: Install Prometheus and Grafana
+      shell: |
+        helm install monitoring prometheus-community/kube-prometheus-stack
